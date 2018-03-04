@@ -1,5 +1,8 @@
-import { Template } from 'meteor/templating';
+import angular from 'angular';
+import angularMeteor from 'angular-meteor';
+import todosList from '../imports/components/todosList/todosList';
 
-import './main.html';
-
-$(".button-collapse").sideNav();
+angular.module('simple-todos', [
+    angularMeteor,
+    todosList.name
+]);

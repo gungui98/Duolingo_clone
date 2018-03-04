@@ -5,4 +5,9 @@ npm install
 git clone https://github.com/Dogfalo/materialize
 cd materialize
 npm install
+cd ..
 meteor add materialize:materialize
+meteor add accounts-password dotansimha:accounts-ui-angular
+meteor add kadira:flow-router
+meteor npm install --save angular angular-meteor
+meteor npm install --save bcrypt
