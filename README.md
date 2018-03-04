@@ -34,9 +34,9 @@ To run test module
 ```youtrack
 meteor npm test
 ```
-###Deployment
+### Deployment
 Project soon support deployment using docker and cloud server like Heroku or AWS
-###Built with
+### Built with
 * [Meteor](https://docs.meteor.com/#/full/)
 * [Materialize](http://materializecss.com/)
  ## License
