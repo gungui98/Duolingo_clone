@@ -5,3 +5,4 @@ npm install
 git clone https://github.com/Dogfalo/materialize
 cd materialize
 npm install
+meteor add materialize:materialize
