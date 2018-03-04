@@ -6,4 +6,4 @@ install:
       - curl https://install.meteor.com/ | sh
       - npm install
 script:
-      - meteor npm test
+      - meteor test-packages
