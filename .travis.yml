@@ -12,5 +12,5 @@ os:
       -windows
 language: bash
 install: 
-      -setup-environment.bat
+      -./setup-environment.bat
       
