@@ -1,4 +1,9 @@
-#cirle.yml
-dependencies:
-    - meteor || curl https://install.meteor.com | /bin/sh 
-    - npm install
+# Maintainer : Nguyễn Văn Phi | gunguiuet@gmail.com
+language: node_js
+sudo: required
+
+install:
+      - curl https://install.meteor.com/ | sh
+      - npm install
+script:
+      - meteor npm test
