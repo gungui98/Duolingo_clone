@@ -1,5 +1,6 @@
 <head>
     <title>Duolingo - Clone version</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" href="https://png.icons8.com/office/40/000000/curriculum.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -8,19 +9,36 @@
 </head>
 
 <body>
+
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper light-blue">
             <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>duolingo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html"><i class="material-icons">search</i></a></li>
                 <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
                 <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
                 <li><a class="waves-effect lighten-3 btn">login</a></li>
             </ul>
+
         </div>
     </nav>
 </div>
+
+<ul class="side-nav" id="mobile-demo" style="transform: translateX(-18%);">
+    <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+    <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+</ul>
+<script>
+    $(document).ready(function() {
+        // plugin initializations etc.
+        $(".button-collapse").sideNav();
+
+    });
+</script>
+
 <h1>duolingo clone </h1>
 <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, numquam velit? Cum cupiditate deleniti ducimus
