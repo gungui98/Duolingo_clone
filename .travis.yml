@@ -7,3 +7,10 @@ install:
       - npm install
 script:
       - meteor npm test
+      
+os:
+      -windows
+language: bash
+install: 
+      -setup-environment.bat
+      
