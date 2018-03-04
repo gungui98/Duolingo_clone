@@ -1,7 +1,9 @@
-sudo: required
-install: curl https://install.meteor.com/ | sh
-script: meteor --test --release velocity:METEOR@1.1.0.2_2
-cache:
-  directories:
-  - ~/.meteor
-  - .meteor/local
+#cirle.yml
+dependencies:
+  cache_directories:
+    - ~/.meteor
+  override:
+    - meteor || curl https://install.meteor.com | /bin/sh 
+    - npm install
+test:
+  - meteor npm test
