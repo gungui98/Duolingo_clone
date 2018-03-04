@@ -21,7 +21,7 @@ Clone the project
 ```$xslt
 git clone https://github.com/gungui98/Duolingo_clone.git
 ```
-Run the prepare command-line bash file to setup 
+Run the prepare command-line bash file in windows to setup dev environment (soon support U*nix platform) 
 ```$xslt
 ./setup-environment.bat
 ```
