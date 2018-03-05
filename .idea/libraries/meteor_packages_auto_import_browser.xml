@@ -144,6 +144,7 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/modules/0.11.5/web.browser/stubs.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/mongo-dev-server/1.1.0/web.browser/server.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/mongo-id/1.0.6/web.browser/id.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/newswim_particles/2.0.0/web.browser/particles.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/observe-sequence/1.0.16/web.browser/observe_sequence.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ordered-dict/1.1.0/web.browser/ordered_dict.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/promise/0.10.2/web.browser/client.js" />
@@ -354,6 +355,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/modules/0.11.5/web.browser/stubs.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/mongo-dev-server/1.1.0/web.browser/server.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/mongo-id/1.0.6/web.browser/id.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/newswim_particles/2.0.0/web.browser/particles.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/observe-sequence/1.0.16/web.browser/observe_sequence.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ordered-dict/1.1.0/web.browser/ordered_dict.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/promise/0.10.2/web.browser/client.js" />
