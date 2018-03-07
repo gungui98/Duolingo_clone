@@ -35,9 +35,10 @@ To run test module
 meteor npm test
 ```
 ### Deployment
-Project soon support deployment using docker and cloud server like Heroku or AWS
+Project now support running on docker and soon be in cloud server like Heroku or AWS
 ### Built with
+* [React](https://reactjs.org/docs/hello-world.html)
 * [Meteor](https://docs.meteor.com/#/full/)
 * [Materialize](http://materializecss.com/)
  ## License
- This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
