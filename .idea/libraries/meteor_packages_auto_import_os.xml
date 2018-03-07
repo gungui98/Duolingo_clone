@@ -2,22 +2,22 @@
   <library name="meteor-packages-auto-import-os" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_client.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_client_tests.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_common.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_rate_limit.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_reconnect_tests.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_server.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_tests.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_tests_setup.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_url_tests.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/client_main.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/client_tests.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/localstorage_token.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/server_main.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/server_tests.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/url_client.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/url_server.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_client.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_client_tests.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_common.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_rate_limit.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_reconnect_tests.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_server.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_tests.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_tests_setup.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_url_tests.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/client_main.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/client_tests.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/localstorage_token.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/server_main.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/server_tests.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/url_client.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/url_server.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-password/1.5.0/os/email_templates.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-password/1.5.0/os/email_tests.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-password/1.5.0/os/email_tests_setup.js" />
@@ -183,8 +183,8 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/service-configuration/1.0.11/os/service_configuration_common.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/service-configuration/1.0.11/os/service_configuration_server.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/sha/1.0.9/os/sha256.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.1/os/main.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.1/os/shell-server.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.0/os/main.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.0/os/shell-server.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/spacebars-compiler/1.1.3/os/codegen.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/spacebars-compiler/1.1.3/os/compiler.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/spacebars-compiler/1.1.3/os/optimizer.js" />
@@ -199,7 +199,7 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/templating-tools/1.1.2/os/html-scanner.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/templating-tools/1.1.2/os/templating-tools.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/templating-tools/1.1.2/os/throw-compile-error.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/tmeasday_check-npm-versions/0.1.1/os/check-npm-versions.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/tmeasday_check-npm-versions/0.2.0/os/check-npm-versions.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.1.3/os/deprecated.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.1.3/os/tracker.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.10/os/post.js" />
@@ -218,22 +218,22 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_client.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_client_tests.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_common.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_rate_limit.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_reconnect_tests.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_server.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_tests.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_tests_setup.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/accounts_url_tests.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/client_main.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/client_tests.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/localstorage_token.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/server_main.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/server_tests.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/url_client.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.2/os/url_server.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_client.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_client_tests.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_common.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_rate_limit.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_reconnect_tests.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_server.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_tests.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_tests_setup.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/accounts_url_tests.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/client_main.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/client_tests.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/localstorage_token.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/server_main.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/server_tests.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/url_client.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-base/1.4.0/os/url_server.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-password/1.5.0/os/email_templates.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-password/1.5.0/os/email_tests.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/accounts-password/1.5.0/os/email_tests_setup.js" />
@@ -399,8 +399,8 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/service-configuration/1.0.11/os/service_configuration_common.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/service-configuration/1.0.11/os/service_configuration_server.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/sha/1.0.9/os/sha256.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.1/os/main.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.1/os/shell-server.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.0/os/main.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/shell-server/0.3.0/os/shell-server.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/spacebars-compiler/1.1.3/os/codegen.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/spacebars-compiler/1.1.3/os/compiler.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/spacebars-compiler/1.1.3/os/optimizer.js" />
@@ -415,7 +415,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/templating-tools/1.1.2/os/html-scanner.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/templating-tools/1.1.2/os/templating-tools.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/templating-tools/1.1.2/os/throw-compile-error.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/tmeasday_check-npm-versions/0.1.1/os/check-npm-versions.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/tmeasday_check-npm-versions/0.2.0/os/check-npm-versions.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.1.3/os/deprecated.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.1.3/os/tracker.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.10/os/post.js" />
