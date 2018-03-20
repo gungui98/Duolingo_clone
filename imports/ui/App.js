@@ -8,144 +8,109 @@ export default class App extends Component {
         super();
     }
     render() {
+        const login = 'Đăng nhập';
         const body = {
-            height: "100%"
+            height: '100%'
         }
-        const nav_bar={
-            padding: '0 5%',
-        }
-        const nav = {
-            overflow: 'hidden',
-            position: 'fixed',
-            top: '0',
-            width: '100%',
-            backgroundColor: '#0b4176',
-        }
-        
-        const home = {
-            float: 'left',
-            fontSize: '20pt',
-            color: '#fff',
-            padding: '8px',
-            fontWeight: 'bolder',
-            textDecoration: 'none',
-        }
-        const login = {
-            float: 'right',
-            color: '#fff',
-            textDecoration: 'none',
-            border: '#ccc 1px solid',
-            borderRadius: '8px',    
-            padding: '15px',
-        }
-
         const start = {
             backgroundColor: '#09335d',
+
             height: '100%',
             width: '100%',
+            display: 'table',
+        }
+        const startBody = {
+            display: 'table-cell',
+            verticalAlign: 'middle',
+            textAlign: 'center',
         }
         const btext = {
             color: '#f9f3f4',
             textAlign: 'center',
-            padding: '20% 0',
-            width: '100%',
             lineHeight: '0.4em',
-        }
-        const particle = {
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#0F1331',
+            padding: '20px',
         }
         const btn = {
-            color: '#fff',
-            textDecoration: 'none',
-            border: '#ccc 1px solid',
-            padding: '10px 15px',
-            borderRadius: '8px',
-            lineHeight: '4em',
+            padding: '15px 20px',
+            fontSize: '1.5em',
         }
-        const linkLogo = 'https://cdn4.tgdd.vn/Products/Images/1784/60977/duolingo-icon-1.png';
-        const logo = {
-            height: '120pt',
-            width: '120pt',
-            float: 'left',
-            padding: '0 5%'
-        }
-        const intro= {
-            width: '70%',
-            margin: '5% 10%',
-        }
-        const ttr = {
-            display: 'inline',
-            width: '70%',
-            margin: '5% 15%',
-            textAlign: 'center',
-        }
-        const lttr = {
-            width: '150pt',
-            display: 'inherit',
-        }
-        const rttr = {
-            width: '150pt',
-            display: 'inherit',
-        }
-        const footer = {
-            backgroundColor: '#0b4176',
-            textAlign: 'center',
-        }
-        const cr = {
-            padding: '3px',
-        }
-        const linkCr ={
-            textDecoration: 'none',
-            color: '#fff'
+        const stb = {
+            paddingTop: '5%',
         }
         return (
             <div style={body}>
-                <div style={nav}>
-                    <div style={nav_bar}>
-                        <a href="#home" style={home} >duolingo</a>
-                        <a href="#login" style={login} >Login</a>
+                <nav className="navbar navbar-expand-lg navbar-light d-none d-sm-block bg-primary fixed-top" >
+                    <div className="container-fluid container">
+                        <a className="navbar-brand" href="1.html">
+                            <h2 className="text-white">duolingo</h2>
+                        </a>
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="navbar-nav mr-auto">
+                            </ul>
+                            <div className="my-lg-0">
+                                <button type="button" className="btn btn-primary">{login}</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </nav>
                 <div style={start}>
-                    <div style={btext}>
-                        <h1>Duolingo clone</h1>
-                        <a href="https://github.com/gungui98/Duolingo_clone" style={btn} >Get Started</a>
+                    <div style={startBody}>
+                        <div className="row container" >
+                            <div className="col-md-6">
+                                <img src="https://d7mj4aqfscim2.cloudfront.net/images/splash-2014/globe1.svg" width="70%" height="70%" />
+                            </div>
+                            <div className="col-md-6" style={stb}>
+                                <h1 style={btext}>Duolingo- Học tiếng anh</h1>
+                                <a href="https://github.com/gungui98/Duolingo_clone" className="badge badge-success" style={btn}>Bắt đầu học</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div style={intro}>
-                    <img src={linkLogo} style={logo} />
-                    <h3>Cách tốt nhất để học một ngôn ngữ</h3>
-                    <p>Học cùng Duolingo, bạn sẽ thấy rất vui và cuốn hút. Dành nhiều điểm từ các câu trả lời đúng, trả lời nhanh trước khi hết thời gian hay lên cấp. Những bài học nhỏ-gọn của chúng tôi rất hiệu quả, và đã có một nghiên cứu chứng minh điều này.</p>
-                    <a href="https://youtu.be/8OebgtUjLg4">Xem cách chúng tôi làm</a>
-                </div>
-                <div style={ttr}>
-                    <h3>Mỗi bài học đều được trò chơi hoá.</h3>
-                    <div style={lttr}>
-                        <h4>Đọc, Nghe, Nói</h4>
-                        <p>Mỗi bài học sẽ bao gồm nhiều loại câu hỏi, thử thách về nghe, nói, dịch và trắc nghiệm.</p>
-                    </div>
-                    <div style={rttr}>
-                        <h4>Ngày Streak</h4>
-                        <p>Số ngày mà bạn đã học liên tục trên Duolingo. Đây là cách Duolingo khuyến khích người dùng luyện tập mỗi ngày.</p>
-                    </div>
-                    <div style={lttr}>
-                        <h4>Chấm điểm trong bài học</h4>
-                        <p>Ngay lập tức biết được câu trả lời nào bạn làm đúng. Khi bạn bỏ lỡ một thử thách, chúng tôi sẽ nhanh chóng chỉ cho bạn cách cải thiện..</p>
-                    </div>
-                    
-                    <div style={rttr}>
-                        <h4>Trái tim</h4>
-                        <p>Với mỗi câu trả lời sai, bạn sẽ mất một trái tim trong quá trình làm bài. Nếu mất hết số trái tim, bạn sẽ phải bắt đầu lại từ đầu.</p>
+                <div className="container alert">
+                    <div className="row justify-content-center">
+                        <div className="col-md-4 alert ">
+                            <h1>Duolingo</h1>
+                        </div>
+                        <div className="col-md-6 alert ">
+                            <h3>Cách tốt nhất để học một ngôn ngữ</h3>
+                            <p>Học cùng Duolingo, bạn sẽ thấy rất vui và cuốn hút. Dành nhiều điểm từ các câu trả lời đúng, trả lời nhanh trước khi hết thời gian hay lên cấp. Những bài học nhỏ-gọn của chúng tôi rất hiệu quả, và đã có một nghiên cứu chứng minh điều này.</p>
+                        </div>
                     </div>
                 </div>
-                <div style={footer}>
-                <div style={cr}>
-                    <a href="" style={linkCr}><h4>© Repo nhom3</h4></a>
+                <div className="container alert">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6 alert ">
+                            <p>Thử giao diện mới với ứng dụng cho iPhone và Android của chúng tôi. Tải về và bạn sẽ biết vì sao Apple và Google trao cho Duolingo danh hiệu xuất sắc nhất.</p>
+                        </div>
+                        <div className="col-md-5 alert ">
+                            <h2>Học mọi lúc mọi nơi</h2>
+                            <button type="button" className="btn btn-outline-primary">IOS</button>
+                            <button type="button" className="btn btn-outline-secondary">Android</button>
+                            <button type="button" className="btn btn-outline-success">Window Phone</button>
+                        </div>
+                    </div>
                 </div>
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6">
+                            <h3 >Học tiếng anh cùng Duolingo</h3>
+                        </div>
+                        <div className="col-md-3">
+                            <a href="1.html" className="badge badge-success" style={btn}>Bắt đầu học</a>
+                        </div>
+                    </div>
+                    <hr />
+                    <div >
+                        <p className="text-center ">© Made by <a href="https://github.com/gungui98/Duolingo_clone">nhom3</a> - CNPM</p>
+                    </div>
                 </div>
             </div>
+
         );
     }
 

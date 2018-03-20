@@ -9,8 +9,8 @@
     "bcrypt": "^1.0.3",
     "classnames": "^2.2.5",
     "meteor-node-stubs": "^0.3.2",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-particles-js": "^2.1.0",
     "resources": "^0.4.3"
   },
