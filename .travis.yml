@@ -7,6 +7,5 @@ install:
       - curl https://install.meteor.com/ | sh
       - npm install
 script:
-      - meteor npm test
       - docker tag gungui/duolingo_clone registry.heroku.com/duolingo-clone/web
       - docker push registry.heroku.com/duolingo-clone/web
