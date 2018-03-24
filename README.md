@@ -36,7 +36,9 @@ meteor npm test
 ```
 ### Deployment
 Project now support running on docker 
+
 [Herolu](https://duolingo-clone.herokuapp.com/)
+
 ### Built with
 * [React](https://reactjs.org/docs/hello-world.html)
 * [Meteor](https://docs.meteor.com/#/full/)
