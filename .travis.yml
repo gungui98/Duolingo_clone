@@ -2,10 +2,11 @@
 sudo: required
 language: node_js
 node_js:
-  - "0.10"
+  - "4.6.2"
   
 before_install:
   - "curl -L https://git.io/ejPSng | /bin/sh"
+  - npm install -g npm@latest
 
 env:
   - CXX=g++-4.8
