@@ -1,12 +1,19 @@
 # Maintainer : Nguyễn Văn Phi | gunguiuet@gmail.com
-language: node_js
 sudo: required
+language: node_js
+node_js:
+  - "0.10"
+  
+before_install:
+  - "curl -L https://git.io/ejPSng | /bin/sh"
 
-install:
-      - curl https://install.meteor.com/ | sh
-      - npm install
-script:
-      - meteor lint
-      - meteor test
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
       
       
