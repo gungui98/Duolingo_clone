@@ -7,6 +7,6 @@ install:
       - npm install
 script:
       - meteor lint
-      - meteor npm test
+      - meteor test
       
       
