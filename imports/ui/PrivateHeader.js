@@ -8,11 +8,11 @@ export const PrivateHeader = (props) => {
   const navImageSrc = props.isNavOpen ? '/images/x.svg' : '/images/bars.svg';
 
   return (
-    <div className="header">
+    <div className="header z-depth-3">
       <div className="header__content">
         <img className="header__nav-toggle" src={navImageSrc} onClick={props.handleNavToggle}/>
         <h1 className="header__title">{props.title}</h1>
-        <button className="button button--link-text" onClick={() => props.handleLogout()}>Logout</button>
+        <button className="btn" onClick={() => props.handleLogout()}>Logout</button>
       </div>
     </div>
   );

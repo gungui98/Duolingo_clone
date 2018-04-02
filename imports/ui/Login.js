@@ -34,12 +34,20 @@ export class Login extends React.Component {
           {this.state.error ? <p>{this.state.error}</p> : undefined}
 
           <form onSubmit={this.onSubmit.bind(this)} noValidate className="boxed-view__form">
-            <input type="email" ref="email" name="email" placeholder="Email"/>
-            <input type="password" ref="password" name="password" placeholder="Password"/>
-            <button className="button">Đăng nhập</button>
+            <div className="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="email" ref="email" name="email" className="validate"/>
+              <label htmlFor="email">Email</label>
+            </div>
+            <div className="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input type="password" ref="password" name="password" className="validate"/>
+              <label htmlFor="password">Mật khẩu  </label>
+            </div>
+            <button className="btn">Đăng nhập</button>
           </form>
 
-          <Link to="/signup">Tạo tài khoản mới?</Link>
+          <Link className = "link" to="/signup">Tạo tài khoản mới?</Link>
         </div>
       </div>
     );

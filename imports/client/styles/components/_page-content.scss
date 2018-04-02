@@ -35,8 +35,13 @@
 .page-content__main {
   display: flex;
   width: 100%;
-
+  border: 2px solid;
   @include desktop {
     width: $page-content-main-width;
   }
+}
+
+.link{
+    position: relative;
+    top: 15px;
 }

@@ -39,8 +39,8 @@ export const routes = (
       <Route path="/" component={Home} privacy="unauth"/>
       <Route path="/signup" component={Signup} privacy="unauth"/>
       <Route path="/login" component={Login} privacy="unauth"/>
-      <Route path="/dashboard" component={Unsupport}/>
-      <Route path="/dashboard/:id" component={Unsupport}/>
+      <Route path="/dashboard" component={Dashboard}/>
+      <Route path="/dashboard/:id" component={Dashboard}/>
       <Route path="*" component={NotFound}/>
     </Route>
   </Router>

@@ -16,9 +16,13 @@ export class Signup extends React.Component {
 
     let email = this.refs.email.value.trim();
     let password = this.refs.password.value.trim();
+    let re_password = this.refs.re_password.value.trim();
 
     if (password.length < 9) {
       return this.setState({error: 'Mật khẩu phải dài hơn 6 ký tự'});
+    }
+    if (re_password !== password) {
+      return this.setState({error: 'Mật khẩu không khớp'});
     }
 
     this.props.createUser({email, password}, (err) => {
@@ -38,12 +42,22 @@ export class Signup extends React.Component {
           {this.state.error ? <p>{this.state.error}</p> : undefined}
 
           <form onSubmit={this.onSubmit.bind(this)} noValidate className="boxed-view__form">
-            <input type="email" ref="email" name="email" placeholder="Email"/>
-            <input type="password" ref="password" name="password" placeholder="Password"/>
-            <button className="button">Tạo tài khoản</button>
+          <div className="input-field col s12">
+              <input type="email" ref="email" className="validate"/>
+              <label for="email">Email</label>
+            </div>
+            <div className="input-field col s12">
+              <input type="password" ref="password" className="validate"/>
+              <label htmlFor="password">Mật khẩu</label>
+            </div>
+            <div className="input-field col s12">
+              <input type="password" ref="re_password" className="validate"/>
+              <label htmlFor="re-password">Xác nhận mật khẩu</label>
+            </div>
+            <button className="btn">Tạo tài khoản</button>
           </form>
 
-          <Link to="/login">Đã có tài khoản?</Link>
+          <Link className = "link" to="/login">Đã có tài khoản?</Link>
         </div>
       </div>
     );
