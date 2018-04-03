@@ -6,5 +6,5 @@ install:
   - curl https://install.meteor.com/ | sh
   - meteor npm install
 after_install:
-  - meteor test
+  - meteor test --driver-package  practicalmeteor:mocha
       
