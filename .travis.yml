@@ -2,7 +2,7 @@
 sudo: required
 language: node_js
 
-before_install:
+install:
   - curl https://install.meteor.com/ | sh
   - meteor npm install
 after_install:
