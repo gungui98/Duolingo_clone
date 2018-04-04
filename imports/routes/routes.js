@@ -36,11 +36,11 @@ export const globalOnEnter = (nextState) => {
 export const routes = (
   <Router history={browserHistory}>
     <Route onEnter={globalOnEnter} onChange={globalOnChange}>
-      <Route path="/" component={Home} privacy="unauth"/>
+      <Route path="/" component={Login} privacy="unauth"/>
       <Route path="/signup" component={Signup} privacy="unauth"/>
       <Route path="/login" component={Login} privacy="unauth"/>
-      <Route path="/dashboard" component={Dashboard}/>
-      <Route path="/dashboard/:id" component={Dashboard}/>
+      <Route path="/dashboard" component={NotFound}/>
+      <Route path="/dashboard/:id" component={NotFound}/>
       <Route path="*" component={NotFound}/>
     </Route>
   </Router>
