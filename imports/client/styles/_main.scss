@@ -9,3 +9,7 @@
 @import './components/checkbox';
 @import './components/item';
 @import './components/home';
+
+html, body, #app{
+    height: 100%;
+}
