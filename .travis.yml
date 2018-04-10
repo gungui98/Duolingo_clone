@@ -1,20 +1,10 @@
 # Maintainer : Nguyễn Văn Phi | gunguiuet@gmail.com
 sudo: required
 language: node_js
-node_js:
-  - "4.6.2"
-  
-before_install:
-  - "curl -L https://git.io/ejPSng | /bin/sh"
-  -  meteor npm install -g npm@5.6.0
 
-env:
-  - CXX=g++-4.8
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-      
+install:
+  - curl https://install.meteor.com/ | sh
+  - meteor npm install
+test:
+  - meteor test --driver-package  practicalmeteor:mocha
       

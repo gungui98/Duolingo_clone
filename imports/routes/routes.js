@@ -7,8 +7,9 @@ import Signup from '../ui/Signup';
 import Dashboard from '../ui/Dashboard';
 import NotFound from '../ui/NotFound';
 import Login from '../ui/Login';
-import {Home} from '../ui/Home'
-import {Unsupport} from "../ui/Unsupport"
+import {Home} from '../ui/Home';
+import {Unsupport} from "../ui/Unsupport";
+import Quiz from "../ui/Quiz";
 
 const onEnterNotePage = (nextState) => {
   Session.set('selectedNoteId', nextState.params.id);
@@ -36,12 +37,15 @@ export const globalOnEnter = (nextState) => {
 export const routes = (
   <Router history={browserHistory}>
     <Route onEnter={globalOnEnter} onChange={globalOnChange}>
+
       <Route path="/" component={Home} privacy="unauth"/>
       <Route path="/home" component={Home} privacy="unauth"/>
+      <Route path="/" component={Login} privacy="unauth"/>
       <Route path="/signup" component={Signup} privacy="unauth"/>
       <Route path="/login" component={Login} privacy="unauth"/>
-      <Route path="/dashboard" component={Dashboard}/>
-      <Route path="/dashboard/:id" component={Dashboard}/>
+      <Route path="/dashboard" component={NotFound}/>
+      <Route path="/dashboard/:id" component={NotFound}/>
+      <Route path="/qa" component={Quiz}/>
       <Route path="*" component={NotFound}/>
     </Route>
   </Router>
