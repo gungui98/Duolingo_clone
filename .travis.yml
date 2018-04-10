@@ -5,6 +5,5 @@ language: node_js
 install:
   - curl https://install.meteor.com/ | sh
   - meteor npm install
-test:
-  - meteor test --driver-package  practicalmeteor:mocha
+
       
