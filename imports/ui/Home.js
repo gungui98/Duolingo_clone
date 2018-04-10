@@ -26,20 +26,26 @@ export class Home extends React.Component{
         };
         return (
             <div >
-                <Particles params={params} className = "particles_home"/>
-                <container className="btext">
-                            <row>
-                                <h1>Duolingo </h1>
-                            </row>
-                            <col xs='auto'>
-                                <row>
-                                <a href="/signup" className ="register_button" >Đăng ký ngay</a>
-                                </row>
-                                <row>
-                                <Link to="/login">Đã có tài khoản?</Link>
-                                </row>
-                            </col>
-                </container>
+                <div className='section'>
+                        <Particles className ='particles_home' params={params} />
+                        <div className = 'intro'>
+                        
+                        <div className="container center">
+                                    <div className = "row">
+                                        <h1>Duolingo </h1>
+                                    </div>
+                                    <div className = "col">
+                                        <div className = "row">
+                                        <a href="/signup" className ="register_button" >Đăng ký ngay</a>
+                                        </div>
+                                        <div className = "row">
+                                        <Link to="/login">Đã có tài khoản?</Link>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         );
     }

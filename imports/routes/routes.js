@@ -1,4 +1,4 @@
-  import { Meteor } from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 import { Session } from 'meteor/session';
@@ -37,6 +37,7 @@ export const routes = (
   <Router history={browserHistory}>
     <Route onEnter={globalOnEnter} onChange={globalOnChange}>
       <Route path="/" component={Home} privacy="unauth"/>
+      <Route path="/home" component={Home} privacy="unauth"/>
       <Route path="/signup" component={Signup} privacy="unauth"/>
       <Route path="/login" component={Login} privacy="unauth"/>
       <Route path="/dashboard" component={Dashboard}/>

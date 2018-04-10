@@ -35,22 +35,25 @@ export class Signup extends React.Component {
   }
   render() {
     return (
-      <div className="boxed-view">
+      <div className="boxed-view z-depth-3">
         <div className="boxed-view__box">
           <h1>Đăng ký</h1>
 
           {this.state.error ? <p>{this.state.error}</p> : undefined}
 
-          <form onSubmit={this.onSubmit.bind(this)} noValidate className="boxed-view__form">
+          <form onSubmit={this.onSubmit.bind(this)} noValidate className="boxed-view__form ">
           <div className="input-field col s12">
+              <i className="material-icons prefix">account_circle</i>
               <input type="email" ref="email" className="validate"/>
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
             </div>
             <div className="input-field col s12">
+              <i className="material-icons prefix">lock</i>
               <input type="password" ref="password" className="validate"/>
               <label htmlFor="password">Mật khẩu</label>
             </div>
             <div className="input-field col s12">
+              <i className="material-icons prefix">lock_outline</i>
               <input type="password" ref="re_password" className="validate"/>
               <label htmlFor="re-password">Xác nhận mật khẩu</label>
             </div>

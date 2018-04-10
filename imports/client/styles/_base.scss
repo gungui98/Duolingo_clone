@@ -41,3 +41,6 @@ input[type=text], input[type=email], input[type=password], textarea {
   margin-bottom: $space;
   padding: $input-spacing;
 }
+.transparentBG {
+  background-color: rgba(0,0,0,0);
+}
