@@ -1,36 +1,28 @@
 import { Meteor } from 'meteor/meteor';
-import ReactDOM from 'react-dom';
-import { Tracker } from 'meteor/tracker';
-import { Session } from 'meteor/session';
-import { browserHistory } from 'react-router';
 
-import { routes, onAuthChange } from '../imports/routes/routes';
-import '../imports/startup/simple-schema-configuration.js';
+import React from "react";
+import {render} from "react-dom";
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
 
-Tracker.autorun(() => {
-  const isAuthenticated = !!Meteor.userId();
-  const currentPagePrivacy = Session.get('currentPagePrivacy');
+import "../imports/assets/css/material-dashboard-react.css";
 
-  onAuthChange(isAuthenticated, currentPagePrivacy);
-});
+import indexRoutes from "../imports/routes/index.jsx";
 
-Tracker.autorun(() => {
-  const selectedNoteId = Session.get('selectedNoteId');
-  Session.set('isNavOpen', false);
+const hist = createBrowserHistory();
 
-  if (selectedNoteId) {
-    browserHistory.replace(`/dashboard/${selectedNoteId}`);
-  }
-});
-
-Tracker.autorun(() => {
-  const isNavOpen = Session.get('isNavOpen');
-
-  document.body.classList.toggle('is-nav-open', isNavOpen);
-});
 
 Meteor.startup(() => {
-  Session.set('selectedNoteId', undefined);
-  Session.set('isNavOpen', false);
-  ReactDOM.render(routes, document.getElementById('app'));
+    render(
+        <Router history={hist}>
+            <Switch>
+                {indexRoutes.map((prop, key) => {
+                    return <Route path={prop.path} component={prop.component} key={key} />;
+                })}
+            </Switch>
+        </Router>,
+        document.getElementById("root")
+    );
+
 });
+
