@@ -1,6 +1,7 @@
 import DashboardPage from "../views/Dashboard/Dashboard.jsx";
 import UserProfile from "../views/UserProfile/UserProfile.jsx";
 import TableList from "../views/TableList/TableList.jsx";
+import Notfound from "../views/Notfound/Notfound.jsx";
 import Typography from "../views/Typography/Typography.jsx";
 import Icons from "../views/Icons/Icons.jsx";
 import Maps from "../views/Maps/Maps.jsx";
@@ -22,28 +23,28 @@ const dashboardRoutes = [
     sidebarName:'a',//: "Dashboard",
     navbarName: "Material Dashboard",
     icon: Dashboard,
-    component: DashboardPage
+    component:Notfound //DashboardPage
   },
   {
     path: "/user",
     sidebarName:'a',//: "User Profile",
     navbarName: "Profile",
     icon: Person,
-    component: UserProfile
+    component:Notfound //UserProfile
   },
   {
     path: "/table",
     sidebarName:'a',//: "Table List",
     navbarName: "Table List",
     icon: ContentPaste,
-    component: TableList
+    component:Notfound //TableList
   },
   {
     path: "/typography",
     sidebarName:'a',//: "Typography",
     navbarName: "Typography",
     icon: LibraryBooks,
-    component: Typography
+    component: Notfound
   },
   // {
   //   path: "/icons",

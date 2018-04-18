@@ -18,7 +18,7 @@
 // // // Variables - Styles that are used on more than one component
 // #############################
 
-const drawerWidth = 76;
+const drawerWidth = 82;
 
 const transition = {
   transition: "all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)"
