@@ -1,12 +1,12 @@
 import DashboardPage from "../views/Dashboard/Dashboard.jsx";
 import UserProfile from "../views/UserProfile/UserProfile.jsx";
-import TableList from "../views/TableList/TableList.jsx";
+import Demo from "../views/demo/demo.jsx";
 import Notfound from "../views/Notfound/Notfound.jsx";
-import Typography from "../views/Typography/Typography.jsx";
+import Loading from "../views/Loading/loading.jsx";
 import Icons from "../views/Icons/Icons.jsx";
 import Maps from "../views/Maps/Maps.jsx";
 import NotificationsPage from "../views/Notifications/Notifications.jsx";
-
+import {Session} from 'meteor/session';
 import {
   Dashboard,
   Person,
@@ -21,28 +21,28 @@ const dashboardRoutes = [
   {
     path: "/dashboard",
     sidebarName:'a',//: "Dashboard",
-    navbarName: "Material Dashboard",
+    navbarName: "Dashboard",
     icon: Dashboard,
-    component:Notfound //DashboardPage
+    component:Demo //DashboardPage
   },
   {
     path: "/user",
     sidebarName:'a',//: "User Profile",
     navbarName: "Profile",
     icon: Person,
-    component:Notfound //UserProfile
+    component:UserProfile //UserProfile
   },
   {
     path: "/table",
     sidebarName:'a',//: "Table List",
-    navbarName: "Table List",
+    navbarName: "Dictionary",
     icon: ContentPaste,
     component:Notfound //TableList
   },
   {
     path: "/typography",
     sidebarName:'a',//: "Typography",
-    navbarName: "Typography",
+    navbarName: "Statistic",
     icon: LibraryBooks,
     component: Notfound
   },

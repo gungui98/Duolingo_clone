@@ -107,8 +107,8 @@ function UserProfile({ ...props }) {
                       About me
                     </InputLabel>
                     <CustomInput
-                      labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                      id="about-me"
+                      labelText="Description goes here"
+                      id="Github"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -127,9 +127,9 @@ function UserProfile({ ...props }) {
         <ItemGrid xs={12} sm={12} md={4}>
           <ProfileCard
             avatar='face/marc.jpg'
-            subtitle="CEO / CO-FOUNDER"
-            title="Alec Thompson"
-            description="Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is..."
+            subtitle="TiTle"
+            title="name"
+            description="summary goes here!"
             footer={
               <Button color="primary" round>
                 Follow

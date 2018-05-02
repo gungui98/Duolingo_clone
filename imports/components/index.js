@@ -80,43 +80,51 @@ import Danger from "./Typography/Danger.jsx";
 import Small from "./Typography/Small.jsx";
 import A from "./Typography/A.jsx";
 
+// ##############################
+// // // Custom component
+// #############################
+
+import Topic from "./Topic/Topic.jsx"
+
 export {
-  // Cards
-  ChartCard,
-  ProfileCard,
-  RegularCard,
-  StatsCard,
-  TasksCard,
-  // CustomButtons
-  Button,
-  IconButton,
-  // CustomInput
-  CustomInput,
-  // Footer
-  Footer,
-  // Grid
-  ItemGrid,
-  // Header
-  Header,
-  HeaderLinks,
-  // Sidebar
-  Sidebar,
-  //Snackbar
-  Snackbar,
-  SnackbarContent,
-  // Table
-  Table,
-  // Tasks
-  Tasks,
-  // Typography
-  P,
-  Quote,
-  Muted,
-  Primary,
-  Info,
-  Success,
-  Warning,
-  Danger,
-  Small,
-  A
+      // Cards
+      ChartCard,
+      ProfileCard,
+      RegularCard,
+      StatsCard,
+      TasksCard,
+      // CustomButtons
+      Button,
+      IconButton,
+      // CustomInput
+      CustomInput,
+      // Footer
+      Footer,
+      // Grid
+      ItemGrid,
+      // Header
+      Header,
+      HeaderLinks,
+      // Sidebar
+      Sidebar,
+      //Snackbar
+      Snackbar,
+      SnackbarContent,
+      // Table
+      Table,
+      // Tasks
+      Tasks,
+      // Typography
+      P,
+      Quote,
+      Muted,
+      Primary,
+      Info,
+      Success,
+      Warning,
+      Danger,
+      Small,
+      A,
+    //timeline Topi
+     Topic
 };
