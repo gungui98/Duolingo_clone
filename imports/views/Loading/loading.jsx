@@ -8,14 +8,16 @@ const MySwal = withReactContent(Swal);
 function Loading() {
 
     Tracker.autorun(() => {
-        if (!Session.get("loadingSuscribe")) {
+        if (Session.get("loadingSuscribe")) {
+            console.log("triggered");
             MySwal.fire({
                 title: <p>Loading</p>,
                 html:<div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                     <ReactLoading type = 'bubbles' color='#000' height={100} width={100} />
                 </div>,
+                timer : 1000000,
                 showConfirmButton:false,
-                allowOutsideClick: false,
+                allowOutsideClick:false,
             })
         }
         else {

@@ -1,11 +1,7 @@
-import DashboardPage from "../views/Dashboard/Dashboard.jsx";
 import UserProfile from "../views/UserProfile/UserProfile.jsx";
 import Demo from "../views/demo/demo.jsx";
 import Notfound from "../views/Notfound/Notfound.jsx";
 import Loading from "../views/Loading/loading.jsx";
-import Icons from "../views/Icons/Icons.jsx";
-import Maps from "../views/Maps/Maps.jsx";
-import NotificationsPage from "../views/Notifications/Notifications.jsx";
 import {Session} from 'meteor/session';
 import {
   Dashboard,
@@ -33,7 +29,7 @@ const dashboardRoutes = [
     component:UserProfile //UserProfile
   },
   {
-    path: "/table",
+    path: "/dictionary",
     sidebarName:'a',//: "Table List",
     navbarName: "Dictionary",
     icon: ContentPaste,

@@ -17,11 +17,11 @@ import {dict} from "../imports/api/Dictionary.jsx";
 // https://stackoverflow.com/questions/15129827/meteor-how-can-i-tell-when-the-database-is-ready
        // putting my animation template active
 if (Meteor.isClient) {
-    Session.set('loadingSuscribe',false);
-    Meteor.subscribe('notes');
-    Meteor.subscribe('user_info');
+    Session.set('loadingSuscribe',true);
     Meteor.subscribe('Dictionary',function(){
-        Session.set('loadingSuscribe',true)});
+        Session.set('loadingSuscribe',false);
+        console.log("loaded")
+    });
 }
 Meteor.startup(() => {
         render(
