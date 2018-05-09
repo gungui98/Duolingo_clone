@@ -12,7 +12,6 @@ import Question from '../Question/Question.jsx'
 // import KeyboardArrowRight from "@material-ui/icons/es/KeyboardArrowRight";
 
 export default function Learn(topic){
-    console.log('alert from learn')
     MySwal.fire({
         position:'top-left',
         html:

@@ -17,6 +17,10 @@ import {blue, CardMedia, createMuiTheme, green, Grid, Icon, red} from "material-
 import {Button} from "material-ui/index";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+const MySwal = withReactContent(Swal);
+
 const question = [
     {
         "_id": "1",
@@ -111,7 +115,7 @@ const btnColor = createMuiTheme({
         secondary: green
     },
 });
-
+let numOfRightAns=0;
 class Question extends React.Component {
     constructor() {
         super();
@@ -119,7 +123,8 @@ class Question extends React.Component {
 
     state = {
         activeStep: 0,
-        isGotRight: undefined
+        isGotRight: undefined,
+        isAnswered:false
     };
 
     handleNext = () => {
@@ -132,20 +137,41 @@ class Question extends React.Component {
         this.setState({activeStep});
     };
     submit = event => {
-        setTimeout(500);
-        if (this.state.activeStep !== question.length - 1) {
-            let checkAnswer = event.currentTarget.getAttribute('data')
+
+            let checkAnswer = event.currentTarget.getAttribute('data');
+            if(checkAnswer === 'T'){
+                numOfRightAns++;
+            }
             this.setState(prevState => ({
                 activeStep: prevState.activeStep,
-                isGotRight: checkAnswer === 'T'
+                isGotRight: checkAnswer === 'T,' ,
+                isAnswered:true
             }));
+        if (this.state.activeStep !== question.length -1) {
             setTimeout(function () {
                 this.setState(prevState => ({
                         activeStep: prevState.activeStep + 1,
-                        isGotRight: false
+                        isGotRight: false,
+                        isAnswered:false,
                     })
                 )
-            }.bind(this), 3000);
+            }.bind(this), 2000);
+        }
+        else{
+            setTimeout(function () {
+                this.setState(prevState => ({
+                        activeStep: prevState.activeStep,
+                        isGotRight: false,
+                        isAnswered:false,
+                    })
+                )
+            }.bind(this), 2000);
+            MySwal.fire({
+                type: 'success',
+                title: 'Bạn đã trả lời đúng'+numOfRightAns+'/'+question.length,
+                showConfirmButton: false,
+                timer: 2000
+            })
         }
     };
 
@@ -181,21 +207,21 @@ class Question extends React.Component {
                                     step.type === 'choice' ?
                                         <Grid container className={classes.answer} spacing={8} align='center'>
                                             <Grid item xs={4}>
-                                                <Button variant="raised" color="default" onClick={this.submit}
+                                                <Button variant="raised" disabled = {this.state.isAnswered} color="primary" onClick={this.submit}
                                                         data={step.answer === "1" ? 'T' : 'F'}
                                                         className={classes.button}>
                                                     {step.answer1}
                                                 </Button>
                                             </Grid>
                                             <Grid item xs={4}>
-                                                <Button variant="raised" color="primary" onClick={this.submit}
+                                                <Button variant="raised" disabled = {this.state.isAnswered} color="primary" onClick={this.submit}
                                                         data={step.answer === "2" ? 'T' : 'F'}
                                                         className={classes.button}>
                                                     {step.answer2}
                                                 </Button>
                                             </Grid>
                                             <Grid item xs={4}>
-                                                <Button variant="raised" color="primary" onClick={this.submit}
+                                                <Button variant="raised" disabled = {this.state.isAnswered} color="primary" onClick={this.submit}
                                                         data={step.answer === "3" ? 'T' : 'F'}
                                                         className={classes.button}>
                                                     {step.answer3}
@@ -213,6 +239,7 @@ class Question extends React.Component {
                         steps={maxSteps}
                         position="static"
                         activeStep={activeStep}
+                        style ={{backgroundColor:this.state.isAnswered?(this.state.isGotRight?'#B1FF95':'#FFCFCC'):'#fff'}}
                         className={classes.mobileStepper}
                         nextButton={
                             <Button size="small" onClick={this.handleNext} disabled={activeStep === maxSteps - 1}>
@@ -223,10 +250,11 @@ class Question extends React.Component {
                         backButton={
                             <div>
                                 {
+                                    this.state.isAnswered?
                                     <Icon className={classes.icon} color="primary">
                                         {console.log(this.state.isGotRight)}
                                         {this.state.isGotRight ? 'done' : 'error'}
-                                    </Icon>
+                                    </Icon>:<div></div>
                                 }
                             </div>}
                     />
