@@ -20,7 +20,6 @@ if (Meteor.isClient) {
     Session.set('loadingSuscribe',true);
     Meteor.subscribe('Dictionary',function(){
         Session.set('loadingSuscribe',false);
-        console.log("loaded")
     });
 }
 Meteor.startup(() => {

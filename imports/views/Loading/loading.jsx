@@ -14,7 +14,7 @@ function Loading() {
                 html:<div style={{alignItems:'center',display:'flex',flexDirection:'column'}}>
                     <ReactLoading type = 'bubbles' color='#000' height={100} width={100} />
                 </div>,
-                timer : 100000,
+                timer : 1000000,
                 showConfirmButton:false,
                 allowOutsideClick:false,
             })

@@ -6,44 +6,19 @@ import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import { MenuItem } from 'material-ui/Menu';
-import Chip from 'material-ui/Chip';
 
-const suggestions = [
-    { label: 'Afghanistan' },
-    { label: 'Aland Islands' },
-    { label: 'Albania' },
-    { label: 'Algeria' },
-    { label: 'American Samoa' },
-    { label: 'Andorra' },
-    { label: 'Angola' },
-    { label: 'Anguilla' },
-    { label: 'Antarctica' },
-    { label: 'Antigua and Barbuda' },
-    { label: 'Argentina' },
-    { label: 'Armenia' },
-    { label: 'Aruba' },
-    { label: 'Australia' },
-    { label: 'Austria' },
-    { label: 'Azerbaijan' },
-    { label: 'Bahamas' },
-    { label: 'Bahrain' },
-    { label: 'Bangladesh' },
-    { label: 'Barbados' },
-    { label: 'Belarus' },
-    { label: 'Belgium' },
-    { label: 'Belize' },
-    { label: 'Benin' },
-    { label: 'Bermuda' },
-    { label: 'Bhutan' },
-    { label: 'Bolivia, Plurinational State of' },
-    { label: 'Bonaire, Sint Eustatius and Saba' },
-    { label: 'Bosnia and Herzegovina' },
-    { label: 'Botswana' },
-    { label: 'Bouvet Island' },
-    { label: 'Brazil' },
-    { label: 'British Indian Ocean Territory' },
-    { label: 'Brunei Darussalam' },
-];
+
+import {dict} from "../../../imports/api/Dictionary.jsx"
+import {Session} from "meteor/session";
+
+let suggestions=[];
+Tracker.autorun(()=> {
+    suggestions = dict.find().fetch().reduce(function (i) {
+        return {label: i.en};
+    });
+    console.log(suggestions)
+});
+
 
 function renderInput(inputProps) {
     const { InputProps, classes, ref, ...other } = inputProps;
@@ -104,102 +79,7 @@ function getSuggestions(inputValue) {
     });
 }
 
-class DownshiftMultiple extends React.Component {
-    state = {
-        inputValue: '',
-        selectedItem: [],
-    };
 
-    handleKeyDown = event => {
-        const { inputValue, selectedItem } = this.state;
-        if (selectedItem.length && !inputValue.length && keycode(event) === 'backspace') {
-            this.setState({
-                selectedItem: selectedItem.slice(0, selectedItem.length - 1),
-            });
-        }
-    };
-
-    handleInputChange = event => {
-        this.setState({ inputValue: event.target.value });
-    };
-
-    handleChange = item => {
-        let { selectedItem } = this.state;
-
-        if (selectedItem.indexOf(item) === -1) {
-            selectedItem = [...selectedItem, item];
-        }
-
-        this.setState({
-            inputValue: '',
-            selectedItem,
-        });
-    };
-
-    handleDelete = item => () => {
-        const selectedItem = [...this.state.selectedItem];
-        selectedItem.splice(selectedItem.indexOf(item), 1);
-
-        this.setState({ selectedItem });
-    };
-
-    render() {
-        const { classes } = this.props;
-        const { inputValue, selectedItem } = this.state;
-
-        return (
-            <Downshift inputValue={inputValue} onChange={this.handleChange} selectedItem={selectedItem}>
-                {({
-                      getInputProps,
-                      getItemProps,
-                      isOpen,
-                      inputValue: inputValue2,
-                      selectedItem: selectedItem2,
-                      highlightedIndex,
-                  }) => (
-                    <div className={classes.container}>
-                        {renderInput({
-                            fullWidth: true,
-                            classes,
-                            InputProps: getInputProps({
-                                startAdornment: selectedItem.map(item => (
-                                    <Chip
-                                        key={item}
-                                        tabIndex={-1}
-                                        label={item}
-                                        className={classes.chip}
-                                        onDelete={this.handleDelete(item)}
-                                    />
-                                )),
-                                onChange: this.handleInputChange,
-                                onKeyDown: this.handleKeyDown,
-                                placeholder: 'Select multiple countries',
-                                id: 'integration-downshift-multiple',
-                            }),
-                        })}
-                        {isOpen ? (
-                            <Paper className={classes.paper} square>
-                                {getSuggestions(inputValue2).map((suggestion, index) =>
-                                    renderSuggestion({
-                                        suggestion,
-                                        index,
-                                        itemProps: getItemProps({ item: suggestion.label }),
-                                        highlightedIndex,
-                                        selectedItem: selectedItem2,
-                                    }),
-                                )}
-                            </Paper>
-                        ) : null}
-                    </div>
-                )}
-            </Downshift>
-        );
-    }
-}
-
-DownshiftMultiple.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 const styles = theme => ({
     root: {
@@ -237,7 +117,7 @@ function IntegrationDownshift(props) {
                             fullWidth: true,
                             classes,
                             InputProps: getInputProps({
-                                placeholder: 'Search a country (start with a)',
+                                placeholder: 'Nhập từ cần tìm!',
                                 id: 'integration-downshift-simple',
                             }),
                         })}
@@ -257,7 +137,6 @@ function IntegrationDownshift(props) {
                     </div>
                 )}
             </Downshift>
-            <DownshiftMultiple classes={classes} />
         </div>
     );
 }

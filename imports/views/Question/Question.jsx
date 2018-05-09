@@ -139,12 +139,13 @@ class Question extends React.Component {
     submit = event => {
 
             let checkAnswer = event.currentTarget.getAttribute('data');
+            console.log(checkAnswer ==='T');
             if(checkAnswer === 'T'){
                 numOfRightAns++;
             }
             this.setState(prevState => ({
                 activeStep: prevState.activeStep,
-                isGotRight: checkAnswer === 'T,' ,
+                isGotRight: checkAnswer === 'T' ,
                 isAnswered:true
             }));
         if (this.state.activeStep !== question.length -1) {
@@ -252,7 +253,6 @@ class Question extends React.Component {
                                 {
                                     this.state.isAnswered?
                                     <Icon className={classes.icon} color="primary">
-                                        {console.log(this.state.isGotRight)}
                                         {this.state.isGotRight ? 'done' : 'error'}
                                     </Icon>:<div></div>
                                 }
