@@ -12,12 +12,15 @@ import {dict} from "../../../imports/api/Dictionary.jsx"
 import {Session} from "meteor/session";
 
 let suggestions=[];
-// Tracker.autorun(()=> {
-//     suggestions = dict.find().fetch().reduce(function (i) {
-//         return {label: i.en};
-//     });
-//     console.log(suggestions)
-// });
+Tracker.autorun(()=> {
+    let data = dict.find().fetch();
+    console.log(suggestions)
+    if(data.length!==0) {
+        suggestions=data.map((i) => {
+            return {label: i.en};
+        });
+    }
+});
 
 
 function renderInput(inputProps) {
