@@ -157,6 +157,7 @@ class IntegrationDownshift extends React.Component{
                                 src={ media + this.state.selectedWord.sound}
                                 autoPlay
                                 controls
+                                style={{width:'100%'}} 
                         />
                     }
                     {this.state.selectedWord === undefined ? undefined : renderHTML(this.state.selectedWord.description)}
