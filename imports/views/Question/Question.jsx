@@ -200,7 +200,7 @@ class Question extends React.Component {
                                 <Card className={classes.card}>
                                     <CardMedia
                                         className={classes.media}
-                                        image={media + '/' + dict.findOne({'en': step.word}).image}
+                                        image={media + dict.findOne({'en': step.word}).image}
                                     />
 
                                 </Card>

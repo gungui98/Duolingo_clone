@@ -6,30 +6,37 @@ import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import { MenuItem } from 'material-ui/Menu';
+import {media} from "../../../imports/variables/general.jsx";
 
 
 import {dict} from "../../../imports/api/Dictionary.jsx"
 import {Session} from "meteor/session";
+import renderHTML from 'react-render-html';
+import {Input} from "material-ui";
+import ReactAudioPlayer from 'react-audio-player';
 
 let suggestions=[];
+let selectedWord = undefined;
 Tracker.autorun(()=> {
-    suggestions = dict.find().fetch().reduce(function (i) {
-        return {label: i.en};
-    });
-    console.log(suggestions)
+    let data = dict.find().fetch();
+    if(data.length!==0) {
+        suggestions=data.map((i) => {
+            return {label: i.en};
+        });
+    }
 });
 
 
 function renderInput(inputProps) {
-    const { InputProps, classes, ref, ...other } = inputProps;
+    const { InputProps, ref, ...other } = inputProps;
 
     return (
         <TextField
+            onChange={(e)=>{selectedWord = e.target.value;console.log(ref)}}
             InputProps={{
+
                 inputRef: ref,
-                classes: {
-                    root: classes.inputRoot,
-                },
+
                 ...InputProps,
             }}
             {...other}
@@ -84,7 +91,6 @@ function getSuggestions(inputValue) {
 const styles = theme => ({
     root: {
         flexGrow: 1,
-        height: 250,
     },
     container: {
         flexGrow: 1,
@@ -105,40 +111,60 @@ const styles = theme => ({
     },
 });
 
-function IntegrationDownshift(props) {
-    const { classes } = props;
+class IntegrationDownshift extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            selectedWord:undefined
+        }
+    }
+    render() {
+        return (
+            <div >
+                <Downshift onChange={e => {
+                    this.setState({selectedWord :dict.findOne({en: e})})
+                }}>
+                    {({getInputProps, getItemProps, isOpen, inputValue, selectedItem, highlightedIndex}) => (
+                        <div>
+                            {renderInput({
+                                fullWidth: true,
+                                InputProps: getInputProps({
+                                    placeholder: 'Nhập từ cần tìm!',
+                                    id: 'integration-downshift-simple',
+                                }),
 
-    return (
-        <div className={classes.root}>
-            <Downshift>
-                {({ getInputProps, getItemProps, isOpen, inputValue, selectedItem, highlightedIndex }) => (
-                    <div className={classes.container}>
-                        {renderInput({
-                            fullWidth: true,
-                            classes,
-                            InputProps: getInputProps({
-                                placeholder: 'Nhập từ cần tìm!',
-                                id: 'integration-downshift-simple',
-                            }),
-                        })}
-                        {isOpen ? (
-                            <Paper className={classes.paper} square>
-                                {getSuggestions(inputValue).map((suggestion, index) =>
-                                    renderSuggestion({
-                                        suggestion,
-                                        index,
-                                        itemProps: getItemProps({ item: suggestion.label }),
-                                        highlightedIndex,
-                                        selectedItem,
-                                    }),
-                                )}
-                            </Paper>
-                        ) : null}
-                    </div>
-                )}
-            </Downshift>
-        </div>
-    );
+                            })}
+                            {isOpen ? (
+                                <Paper square>
+                                    {getSuggestions(inputValue).map((suggestion, index) =>
+                                        renderSuggestion({
+                                            suggestion,
+                                            index,
+                                            itemProps: getItemProps({item: suggestion.label}),
+                                            highlightedIndex,
+                                            selectedItem,
+                                        }),
+                                    )}
+                                </Paper>
+                            ) : null}
+                        </div>
+                    )}
+                </Downshift>
+                <Paper style={{marginTop: '2vh', padding: '3vh'}}>
+                    {
+                        this.state.selectedWord === undefined ? undefined :
+                        <ReactAudioPlayer
+                                src={ media + this.state.selectedWord.sound}
+                                autoPlay
+                                controls
+                        />
+                    }
+                    {this.state.selectedWord === undefined ? undefined : renderHTML(this.state.selectedWord.description)}
+                    {this.state.selectedWord === undefined ? undefined : renderHTML(this.state.selectedWord.example)}
+                </Paper>
+            </div>
+        );
+    }
 }
 
 IntegrationDownshift.propTypes = {
