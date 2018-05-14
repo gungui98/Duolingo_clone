@@ -2,26 +2,71 @@
 // // // Tasks for TasksCard - see Dashboard view
 // #############################
 
-var bugs = [
-    'Sign contract for "What are conference organizers afraid of?"',
-    "Lines From Great Russian Literature? Or E-mails From My Boss?",
-    "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-    "Create 4 Invisible User Experiences you Never Knew About"
+let media = "https://s3-us-west-2.amazonaws.com/cnpmnhom3/media/";
+
+let question = [
+    {
+        "_id": "1",
+        'type': 'choice',
+        "word": "angry",
+        "answer": "3",
+        "question": "Chọn từ cho 'Giận giữ'",
+        "answer1": "agree",
+        "answer2": "attack",
+        "answer3": "angry"
+    },
+    {
+        "_id": "1",
+        'type': 'choice',
+        "word": "angry",
+        "answer": "3",
+        "question": "Chọn từ cho 'Giận giữ'",
+        "answer1": "agree",
+        "answer2": "attack",
+        "answer3": "angry"
+    },
+    {
+        "_id": "1",
+        'type': 'choice',
+        "word": "angry",
+        "answer": "3",
+        "question": "Chọn từ cho 'Giận giữ'",
+        "answer1": "agree",
+        "answer2": "attack",
+        "answer3": "angry"
+    },
+    {
+        "_id": "2",
+        'type': 'choice',
+        "word": "cruel",
+        "answer": "3",
+        "question": "Chọn từ cho 'Độc ác'",
+        "answer1": "clever",
+        "answer2": "create",
+        "answer3": "cruel"
+    },
+
 ];
-var website = [
-    "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-    'Sign contract for "What are conference organizers afraid of?"'
-];
-var server = [
-    "Lines From Great Russian Literature? Or E-mails From My Boss?",
-    "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-    'Sign contract for "What are conference organizers afraid of?"'
-];
-var media = "https://s3-us-west-2.amazonaws.com/cnpmnhom3/media";
+
+topic = [
+    {
+        'image':'https://image.shutterstock.com/image-vector/group-working-people-diversity-diverse-260nw-589527299.jpg',
+        'topic':'Cơ bản 1',
+        'description':'1 số đại từ nhân xưng',
+        'numOfWords':'8',
+        'disabled':'0'
+    },
+    {
+        'image': 'https://thumbs.dreamstime.com/b/summer-print-stylized-fruits-collection-flat-material-design-fruit-icon-set-feeling-spatial-hexagon-cut-half-papaya-70122269.jpg',
+        'topic': 'Cơ bản 2',
+        'description': '1 số loại hoa quả',
+        'numOfWords': '10',
+        'disabled': '1'
+    }
+]
 module.exports = {
-    // these 3 are used to create the tasks lists in TasksCard - Dashboard view
-    bugs,
-    website,
-    server,
-    media
+    media,
+    question,
+    topic
 };
+

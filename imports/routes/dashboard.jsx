@@ -1,73 +1,27 @@
-import DashboardPage from "../views/Dashboard/Dashboard.jsx";
-import UserProfile from "../views/UserProfile/UserProfile.jsx";
-import Demo from "../views/demo/demo.jsx";
-import Notfound from "../views/Notfound/Notfound.jsx";
-import Loading from "../views/Loading/loading.jsx";
-import Icons from "../views/Icons/Icons.jsx";
-import Maps from "../views/Maps/Maps.jsx";
-import NotificationsPage from "../views/Notifications/Notifications.jsx";
-import {Session} from 'meteor/session';
+import DashboardPage from "../views/Dashboard/dashboard.jsx";
+import Dictionary from "../views/Dictionary/dict";
 import {
-  Dashboard,
-  Person,
-  ContentPaste,
-  LibraryBooks,
-  BubbleChart,
-  LocationOn,
-  Notifications
-} from "@material-ui/icons";
+    Dashboard,
+    ContentPaste}
+  from "@material-ui/icons";
 
 const dashboardRoutes = [
-  {
-    path: "/dashboard",
-    sidebarName:'a',//: "Dashboard",
-    navbarName: "Dashboard",
-    icon: Dashboard,
-    component:Demo //DashboardPage
-  },
-  {
-    path: "/user",
-    sidebarName:'a',//: "User Profile",
-    navbarName: "Profile",
-    icon: Person,
-    component:UserProfile //UserProfile
-  },
-  {
-    path: "/table",
-    sidebarName:'a',//: "Table List",
-    navbarName: "Dictionary",
-    icon: ContentPaste,
-    component:Notfound //TableList
-  },
-  {
-    path: "/typography",
-    sidebarName:'a',//: "Typography",
-    navbarName: "Statistic",
-    icon: LibraryBooks,
-    component: Notfound
-  },
-  // {
-  //   path: "/icons",
-  //   sidebarName:'a',//: "Icons",
-  //   navbarName: "Icons",
-  //   icon: BubbleChart,
-  //   component: Icons
-  // },
-  // {
-  //   path: "/maps",
-  //   sidebarName:'a',//: "Maps",
-  //   navbarName: "Map",
-  //   icon: LocationOn,
-  //   component: Maps
-  // },
-  // {
-  //   path: "/notifications",
-  //   sidebarName:'a',//: "Notifications",
-  //   navbarName: "Notifications",
-  //   icon: Notifications,
-  //   component: NotificationsPage
-  // },
-  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+    {
+        path: "/dashboard",
+        sidebarName: "a",//: "Dashboard",
+        navbarName: "Dashboard",
+        icon: Dashboard,
+        component: DashboardPage //DashboardPage
+    },
+    {
+        path: "/dictionary",
+        sidebarName: "a",//: "Table List",
+        navbarName: "Dictionary",
+        icon: ContentPaste,
+        component: Dictionary //TableList
+    },
+    {
+      redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import keycode from 'keycode';
 import Downshift from 'downshift';
 import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
@@ -10,9 +9,7 @@ import {media} from "../../../imports/variables/general.jsx";
 
 
 import {dict} from "../../../imports/api/Dictionary.jsx"
-import {Session} from "meteor/session";
 import renderHTML from 'react-render-html';
-import {Input} from "material-ui";
 import ReactAudioPlayer from 'react-audio-player';
 
 let suggestions=[];
@@ -157,7 +154,7 @@ class IntegrationDownshift extends React.Component{
                                 src={ media + this.state.selectedWord.sound}
                                 autoPlay
                                 controls
-                                style={{width:'100%'}} 
+                                style={{width:'100%'}}
                         />
                     }
                     {this.state.selectedWord === undefined ? undefined : renderHTML(this.state.selectedWord.description)}
