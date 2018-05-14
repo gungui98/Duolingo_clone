@@ -72,7 +72,7 @@ class HeaderLinks extends React.Component {
               className={classes.buttonLink}
             >
               <Notifications className={classes.links} />
-              <span className={classes.notifications}>3</span>
+              <span className={classes.notifications}>5</span>
               <Hidden mdUp>
                 <p onClick={this.handleClick} className={classes.linkText}>
                   Notification
@@ -97,27 +97,36 @@ class HeaderLinks extends React.Component {
               >
                 <Paper className={classes.dropdown}>
                   <MenuList role="menu">
-
                     <MenuItem
                       onClick={this.handleClose}
                       className={classes.dropdownItem}
                     >
-                      topic 'cơ bản 1 đã được thêm vào'
+                      Mike John responded to your email
                     </MenuItem>
-
-                      <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                      >
-                          topic 'cơ bản 2' đang được biên soạn
-                      </MenuItem>
-
-                      <MenuItem
-                          onClick={this.handleClose}
-                          className={classes.dropdownItem}
-                      >
-                          1 vài tính năng đang được hoàn thiện!
-                      </MenuItem>
+                    <MenuItem
+                      onClick={this.handleClose}
+                      className={classes.dropdownItem}
+                    >
+                      You have 5 new tasks
+                    </MenuItem>
+                    <MenuItem
+                      onClick={this.handleClose}
+                      className={classes.dropdownItem}
+                    >
+                      You're now friend with Andrew
+                    </MenuItem>
+                    <MenuItem
+                      onClick={this.handleClose}
+                      className={classes.dropdownItem}
+                    >
+                      Another Notification
+                    </MenuItem>
+                    <MenuItem
+                      onClick={this.handleClose}
+                      className={classes.dropdownItem}
+                    >
+                      Another One
+                    </MenuItem>
                   </MenuList>
                 </Paper>
               </Grow>

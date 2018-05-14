@@ -63,13 +63,13 @@ class Topic extends React.Component {
                         </CardContent>
                         <CardActions className={classes.actions} disableActionSpacing>
 
-                            <Tooltip id="tooltip-fab" title="số từ">
+                            <Tooltip id="tooltip-fab" title="còn lại">
                                 <Badge className={classes.margin} badgeContent={numOfWords} color="primary">
                                     <Assignment/>
                                 </Badge>
                             </Tooltip>
                             {disabled ?
-                                <Tooltip id="tooltip-fab" title="Chủ đề này chưa hỗ trợ hoặc bạn phải hoàn thành khóa học trước đó.">
+                                <Tooltip id="tooltip-fab" title="Bạn phải hoàn thành khóa học trước đó.">
                                     <IconButton><Lock
                                         style={{color: "#000000"}}/></IconButton>
                                 </Tooltip> :
