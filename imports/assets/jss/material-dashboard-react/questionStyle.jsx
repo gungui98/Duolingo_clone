@@ -15,7 +15,7 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.default,
     },
     content: {
-        height: "37em",
+        height: "67vh",
         overflow: "hidden",
         width: "100%",
     },
