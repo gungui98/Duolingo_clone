@@ -2,8 +2,7 @@
   "name": "simple-todos",
   "private": true,
   "scripts": {
-    "start": "meteor run",
-    "test":"meteor test --driver-package meteortesting:mocha"
+    "start": "meteor run"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.44",
